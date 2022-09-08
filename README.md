@@ -1,8 +1,6 @@
-# SixPackSinglePageCalculator
+# Six Pack Calculator
 
-I've never written a ReadMe before, so my apolgies if this doesn't follow a traditional ReadMe convention.
-
-My name is Phillip Bladen. Eight months ago I didn't know a single line of code, and now I'm a second-year CS student with an Android app on my resume. I'll be the first one to admit that this app doesn't look pretty or cure cancer, but every great developer was once where I stand today.
+My name is Phil Bladen. Thanks for clicking on this link from my Resume!
 
 What did I understand before starting this project?
 -Understanding of basic data structures (LinkedLists, queues/dequeues, stacks, BSTs) and their implementation
