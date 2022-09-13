@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private static final double maleSixPackBF = 0.10;
+    private static final double femaleSixPackBF = 0.17;
+
     private EditText totalCurrentWeightField;
     private EditText bodyFatField;
     private EditText weightLossRateField;
@@ -83,13 +86,13 @@ public class MainActivity extends AppCompatActivity {
                     rateOfWeightLoss = Double.parseDouble(weightLossRateField.getText().toString());
 
                     if (sex.equals("male")) {
-                        goalTotalWeight = goalLeanBodyMass / (1 - 0.12);
+                        goalTotalWeight = goalLeanBodyMass / (1 - maleSixPackBF);
                         weeksToSixPack = (totalCurrentWeight - goalTotalWeight) / rateOfWeightLoss;
                         resultText.setTextColor(getResources().getColor(R.color.black));
-                        resultText.setText("Your six pack is " + weeksToSixPack + " weeks away");
+                        resultText.setText("Your six pack is " + String.format("%.1f", weeksToSixPack) + " weeks away");
                     }
                     else if (sex.equals("female")) {
-                        goalTotalWeight = goalLeanBodyMass / (1 - 0.17);
+                        goalTotalWeight = goalLeanBodyMass / (1 - femaleSixPackBF);
                         weeksToSixPack = (totalCurrentWeight - goalTotalWeight) / rateOfWeightLoss;
                         resultText.setTextColor(getResources().getColor(R.color.black));
                         resultText.setText("Your six pack is " + weeksToSixPack + " weeks away");
